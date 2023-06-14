@@ -1,17 +1,17 @@
-.temp {
-    border-radius: 10px;
-    background-color: #012443; 
-    color: rgb(211, 211, 211); 
-    display: inline-block; 
-    padding: 5px 8px;
-}
-
 body {
     background-repeat: no-repeat; 
     background-size: cover; 
     background-image: linear-gradient(#2876a8, #d1e2ed);
     height: 100vh; 
     overflow-y: hidden;
+}
+
+.temp {
+    border-radius: 10px;
+    background-color: #012443; 
+    color: rgb(211, 211, 211); 
+    display: inline-block; 
+    padding: 5px 8px;
 }
 
 .footer {
