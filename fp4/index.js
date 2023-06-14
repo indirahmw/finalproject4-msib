@@ -1,43 +1,21 @@
+const searchButton = document.querySelector('#button-addon2');
+const inputKeyword = document.querySelector('.input-keyword');
 
 
-const apiKey = "863242cfb2b1d357e6093d9a4df19a4b";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+searchButton.addEventListener('click', function() {
 
-const searchBox = document.querySelector(".search input");
-const searchBtn = document.querySelector(".search button");
-const weatherIcon = document.querySelector(".weather-icon");
+    fetch("https://api.openweathermap.org/data/2.5/weather?q="+inputKeyword.value+"&appid=1fe5f03e8b679377cbc41601289edfdd&units=metric")
+        .then(response => response.json())
+        .then(response => {
+            let result = document.querySelector('.result')
 
-async function checkWeather(city){
-    const response = await fetch(apiUrl + city + '&appid=${apiKey}');
-    var data = await response.json();
+            result.innerHTML = `<h2 style="margin-bottom: 15px;">${response.name}, ${response.sys.country}</h2>
+                                <h5><span class="temp">${response.main.temp}°С</span> <span class="temp">${response.weather[0].description}</span></h5>
+                                <p style="margin-bottom: 17px;">Temperature from ${response.main.temp_min}°С to ${response.main.temp_max}°С</p>
+                                <h5>Wind Speed : ${response.wind.speed} m/s</h5>
+                                <h5 style="margin-bottom: 17px;">Clouds : ${response.clouds.all}%</h5>
+                                <h4 style="color: #012443;">Geo Coordinates : [${response.coord.lat}, ${response.coord.lon}]</h4>` 
+        })
+    inputKeyword.value = null;
 
-    
-
-    document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
-    document.querySelector(".humadity").innerHTML = data.main.humadity + "%";
-    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
-
-    if(data.weather[0].main == "Clouds"){
-        weatherIcon.src = "img/clouds.png";
-    }
-    else if(data.weather[0].main == "Clear"){
-        weatherIcon.src = "img/clear.png";
-    }
-    else if(data.weather[0].main == "Rain"){
-        weatherIcon.src = "img/rain.png";
-    }
-    else if(data.weather[0].main == "Drizzle"){
-        weatherIcon.src = "img/drizzle.png";
-    }
-    else if(data.weather[0].main == "Mist"){
-        weatherIcon.src = "img/mist.png";
-    }
-
-    
-}
-
-searchBtn.addEventListener("click", ()=>{
-    checkWeather(searchBox.value);
 })
-
