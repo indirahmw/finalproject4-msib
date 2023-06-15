@@ -1,49 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Final Project 4</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-        <div class="row mt-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <div class="row mt-5">
             <div class="col">
-                <h1 style="color: #F9F9F9;">Check the Weather</h1>
+              <h1 style="color: #ffffff">Check the Weather</h1>
             </div>
-        </div> 
+          </div>
 
-        <div class="row mt-2">
+          <div class="row mt-2 d-flex justify-content-center">
             <div class="col-md-8">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control input-keyword" placeholder="Enter City's or Country's Name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
-                </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control input-keyword"
+                  placeholder="Enter City's or Country's Name"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="button-addon2"
+                  style="background-color: #012443; border: #012443"
+                >
+                  <i
+                    class="fa-brands fa-searchengin"
+                    style="color: rgb(255, 255, 255); font-size: 20px"
+                  ></i>
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="container mt-5 result">
-        <img>
+        <div class="container mt-5 result">
+          <img />
+        </div>
+      </div>
     </div>
 
     <div class="footer">
-        <h6>By Group 2</h3>
+      <h6>
+        <span class="credit" style="color: #ffffff"
+          >Created by Group 2 MSIB Hacktiv
+          <a href="https://www.hacktiv8.com/"
+            >PT Hacktivate Teknologi Indonesia</a
+          >
+          |
+        </span>
+        <span class="far fa-copyright" style="color: #ffffff"></span
+        ><span style="color: #ffffff"> 2023 All Rights Reserved</span>
+      </h6>
     </div>
-      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- JavaScript BootStrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript FontAwesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>
